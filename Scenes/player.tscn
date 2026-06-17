@@ -1,0 +1,68 @@
+[gd_scene load_steps=12 format=3 uid="uid://baibyljjkptg5"]
+
+[ext_resource type="Script" uid="uid://dbx14hw7f3y2b" path="res://Scenes/player.gd" id="1_f1ek2"]
+[ext_resource type="Texture2D" uid="uid://f8jbmkhkcdh0" path="res://Sprites/idle/id1.png" id="2_tx1dd"]
+[ext_resource type="Texture2D" uid="uid://dhqcepstxgl8x" path="res://Sprites/idle/id2.png" id="3_gymyn"]
+[ext_resource type="Texture2D" uid="uid://cq85v0dekprc" path="res://Sprites/idle/id3.png" id="4_pu2lt"]
+[ext_resource type="Texture2D" uid="uid://c5cwoqsqh7k4n" path="res://Sprites/idle/id4.png" id="5_ukyrk"]
+[ext_resource type="Texture2D" uid="uid://c0pixiv7quner" path="res://Sprites/walk/wl1.png" id="6_7dp3o"]
+[ext_resource type="Texture2D" uid="uid://bre75dohgbjkg" path="res://Sprites/walk/wl2.png" id="7_h4iuc"]
+[ext_resource type="Texture2D" uid="uid://cg075dn3r8o64" path="res://Sprites/walk/wl3.png" id="8_fd4e3"]
+[ext_resource type="Texture2D" uid="uid://bs2ajt4cyk8rm" path="res://Sprites/walk/wl4.png" id="9_qqcod"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgqql"]
+size = Vector2(330, 265)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_igrcy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tx1dd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gymyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pu2lt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ukyrk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_7dp3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_h4iuc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fd4e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qqcod")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 2.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(-111, -20)
+script = ExtResource("1_f1ek2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(110, 22.500002)
+scale = Vector2(0.2, 0.2)
+shape = SubResource("RectangleShape2D_vgqql")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(111, 20.000002)
+scale = Vector2(0.034167483, 0.035832565)
+sprite_frames = SubResource("SpriteFrames_igrcy")
+animation = &"idle"
+frame_progress = 0.07095874
