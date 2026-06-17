@@ -2,16 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://bwmxjb1mkj6fc" path="res://Sprites/asset/platform.png" id="1_1rc8e"]
 
-[node name="platform" type="Node2D"]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-scale = Vector2(3, 3)
-polygon = PackedVector2Array(-1, 0, 10, 0, 0, 9.333334, -11, 0)
+[node name="platform" type="StaticBody2D"]
 
 [node name="Platform" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, 10)
 scale = Vector2(0.141, 0.141)
 texture = ExtResource("1_1rc8e")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(3, 3)
+polygon = PackedVector2Array(-1, 0, 10, 0, 0.33333334, 8, -9.666667, 0)
