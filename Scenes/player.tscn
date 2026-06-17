@@ -51,18 +51,17 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(-111, -20)
+scale = Vector2(2, 2)
 script = ExtResource("1_f1ek2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(110, 22.500002)
 scale = Vector2(0.2, 0.2)
 shape = SubResource("RectangleShape2D_vgqql")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(111, 20.000002)
+position = Vector2(0, -3)
 scale = Vector2(0.034167483, 0.035832565)
 sprite_frames = SubResource("SpriteFrames_igrcy")
-animation = &"idle"
-frame_progress = 0.07095874
+animation = &"walk"
+frame_progress = 0.31728196

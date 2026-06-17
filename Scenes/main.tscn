@@ -1,37 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnj4f72cn8l85"]
+[gd_scene load_steps=5 format=3 uid="uid://dnj4f72cn8l85"]
 
+[ext_resource type="Texture2D" uid="uid://obulb3ui0let" path="res://Sprites/asset/Background polos (1).png" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://baibyljjkptg5" path="res://Scenes/player.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://btoc41q3lwco5" path="res://Scenes/platform.tscn" id="3_8gbba"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jjgbg"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjgbg"]
-size = Vector2(36, 35)
-
 [node name="Main" type="Node2D"]
 
+[node name="BackgroundPolos(1)" type="Sprite2D" parent="."]
+position = Vector2(611.559, 331.25003)
+scale = Vector2(0.8863807, 0.8795574)
+texture = ExtResource("1_bo1nx")
+
 [node name="Player" parent="." instance=ExtResource("1_jjgbg")]
-position = Vector2(462, 284)
+position = Vector2(513, 543)
+scale = Vector2(1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(3, 3)
+zoom = Vector2(1.5, 1.5)
 position_smoothing_enabled = true
 drag_vertical_enabled = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(578, 415)
+position = Vector2(620, 591)
 shape = SubResource("WorldBoundaryShape2D_jjgbg")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(413, 357)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(3, -7.5)
-shape = SubResource("RectangleShape2D_jjgbg")
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D2"]
-offset_left = -17.0
-offset_top = -25.0
-offset_right = 23.0
-offset_bottom = 15.0
+[node name="platform" parent="." instance=ExtResource("3_8gbba")]
+position = Vector2(430, 508)
