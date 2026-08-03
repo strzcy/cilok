@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnj4f72cn8l85"]
+[gd_scene load_steps=8 format=3 uid="uid://dnj4f72cn8l85"]
 
 [ext_resource type="PackedScene" uid="uid://baibyljjkptg5" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="Texture2D" uid="uid://d0p5iygbthuyj" path="res://Sprites/asset/background 9_16.png" id="3_8gbba"]
 [ext_resource type="Script" uid="uid://co4p5gj1ilic8" path="res://Scripts/platform.gd" id="4_jjvhh"]
+[ext_resource type="Texture2D" uid="uid://bkb1ysc42yu1s" path="res://Sprites/asset/coin.png" id="4_kry3j"]
+[ext_resource type="Texture2D" uid="uid://dnngbi3qv6ckm" path="res://Sprites/asset/tusukan.png" id="5_kry3j"]
+[ext_resource type="Texture2D" uid="uid://df1ckhpdcxjou" path="res://Sprites/asset/bendera kemenangan.png" id="6_21xkr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jjgbg"]
 
@@ -15,7 +18,7 @@ scale = Vector2(0.8717448, 0.87174475)
 texture = ExtResource("3_8gbba")
 
 [node name="Player" parent="." instance=ExtResource("1_jjgbg")]
-position = Vector2(619, 514)
+position = Vector2(697, -751)
 scale = Vector2(1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -31,3 +34,31 @@ shape = SubResource("WorldBoundaryShape2D_jjgbg")
 
 [node name="PlatformContainer" type="Node2D" parent="."]
 position = Vector2(1, 0)
+
+[node name="Coin" type="Sprite2D" parent="."]
+position = Vector2(402.99997, 558.99994)
+scale = Vector2(0.11159521, 0.11159521)
+texture = ExtResource("4_kry3j")
+
+[node name="Coin2" type="Sprite2D" parent="."]
+position = Vector2(158.99994, 564)
+scale = Vector2(0.11159521, 0.11159521)
+texture = ExtResource("4_kry3j")
+
+[node name="Coin3" type="Sprite2D" parent="."]
+position = Vector2(416.00003, 560.99994)
+scale = Vector2(0.11159521, 0.11159521)
+texture = ExtResource("4_kry3j")
+
+[node name="Tusukan" type="Sprite2D" parent="."]
+position = Vector2(667, 493)
+texture = ExtResource("5_kry3j")
+
+[node name="Tusukan2" type="Sprite2D" parent="."]
+position = Vector2(354, 334)
+texture = ExtResource("5_kry3j")
+
+[node name="BenderaKemenangan" type="Sprite2D" parent="."]
+position = Vector2(469, -777.9999)
+scale = Vector2(0.3292683, 0.3292683)
+texture = ExtResource("6_21xkr")
