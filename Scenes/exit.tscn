@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://ds6ao5nwquulj"]
+
+[ext_resource type="Texture2D" uid="uid://obulb3ui0let" path="res://Sprites/asset/Background polos (1).png" id="1_jnktl"]
+[ext_resource type="Texture2D" uid="uid://biub7h1fqhc2v" path="res://Sprites/asset/Judul (1).png" id="2_cvpcg"]
+[ext_resource type="Texture2D" uid="uid://bpl8n14gvqctw" path="res://Sprites/asset/Tombol Exit (1).png" id="3_jqsgg"]
+[ext_resource type="Texture2D" uid="uid://dt4pnvku3pc3" path="res://Sprites/asset/Tombol Restart.png" id="4_o715m"]
+[ext_resource type="Texture2D" uid="uid://b0fnnet7jjmlb" path="res://Sprites/asset/Gemini_Generated_Image_hgpe4qhgpe4qhgpe-removebg-preview.png" id="5_7cp2g"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundPolos(1)" type="Sprite2D" parent="."]
+position = Vector2(598, 288)
+texture = ExtResource("1_jnktl")
+
+[node name="Judul(1)" type="Sprite2D" parent="."]
+position = Vector2(344, 282.00003)
+scale = Vector2(1.0676795, 1.0676796)
+texture = ExtResource("2_cvpcg")
+
+[node name="TombolExit(1)" type="Sprite2D" parent="."]
+position = Vector2(860.4999, 418.00003)
+scale = Vector2(0.6699997, 0.6)
+texture = ExtResource("3_jqsgg")
+
+[node name="TombolRestart" type="Sprite2D" parent="."]
+position = Vector2(861, 283.49988)
+scale = Vector2(0.68000025, 0.6219998)
+texture = ExtResource("4_o715m")
+
+[node name="GeminiGeneratedImageHgpe4Qhgpe4QhgpeRemovebgPreview" type="Sprite2D" parent="."]
+position = Vector2(857.18396, 156)
+scale = Vector2(0.67241395, 0.7241378)
+texture = ExtResource("5_7cp2g")

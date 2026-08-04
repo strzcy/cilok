@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://duwbgyk22rwk3"]
+
+[ext_resource type="Texture2D" uid="uid://obulb3ui0let" path="res://Sprites/asset/Background polos (1).png" id="1_158mb"]
+[ext_resource type="Texture2D" uid="uid://biub7h1fqhc2v" path="res://Sprites/asset/Judul (1).png" id="2_wwsa2"]
+[ext_resource type="Texture2D" uid="uid://22i2jxmc7a11" path="res://Sprites/asset/Tombol play (2).png" id="3_jsrd8"]
+[ext_resource type="Script" uid="uid://cpyyvwa2lk508" path="res://Scenes/buttonply.gd" id="4_jsrd8"]
+[ext_resource type="Texture2D" uid="uid://bpl8n14gvqctw" path="res://Sprites/asset/Tombol Exit (1).png" id="4_wbdvm"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundPolos(1)" type="Sprite2D" parent="."]
+position = Vector2(598, 288)
+texture = ExtResource("1_158mb")
+
+[node name="Judul(1)" type="Sprite2D" parent="."]
+position = Vector2(553, 208)
+texture = ExtResource("2_wwsa2")
+
+[node name="TombolPlay(2)" type="Sprite2D" parent="."]
+position = Vector2(322, 444)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_jsrd8")
+script = ExtResource("4_jsrd8")
+
+[node name="TombolExit(1)" type="Sprite2D" parent="."]
+position = Vector2(784, 446)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_wbdvm")
