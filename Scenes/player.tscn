@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://baibyljjkptg5"]
+[gd_scene load_steps=13 format=3 uid="uid://baibyljjkptg5"]
 
 [ext_resource type="Script" uid="uid://dbx14hw7f3y2b" path="res://Scripts/player.gd" id="1_f1ek2"]
+[ext_resource type="Texture2D" uid="uid://bln7mtkademh8" path="res://Sprites/die.png" id="2_gymyn"]
 [ext_resource type="Texture2D" uid="uid://f8jbmkhkcdh0" path="res://Sprites/idle/id1.png" id="2_tx1dd"]
 [ext_resource type="Texture2D" uid="uid://dhqcepstxgl8x" path="res://Sprites/idle/id2.png" id="3_gymyn"]
 [ext_resource type="Texture2D" uid="uid://cq85v0dekprc" path="res://Sprites/idle/id3.png" id="4_pu2lt"]
@@ -15,6 +16,14 @@ size = Vector2(330, 265)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_igrcy"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gymyn")
+}],
+"loop": false,
+"name": &"die",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_tx1dd")
@@ -53,9 +62,6 @@ animations = [{
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(2, 2)
 script = ExtResource("1_f1ek2")
-walk_speed = null
-acceleration = null
-deceleration = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.2, 0.2)
@@ -66,5 +72,4 @@ texture_filter = 1
 position = Vector2(0, -3)
 scale = Vector2(0.034167483, 0.035832565)
 sprite_frames = SubResource("SpriteFrames_igrcy")
-animation = &"walk"
-frame_progress = 0.71646696
+animation = &"die"
