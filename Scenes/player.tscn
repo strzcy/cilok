@@ -50,9 +50,12 @@ animations = [{
 "speed": 2.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(2, 2)
 script = ExtResource("1_f1ek2")
+walk_speed = null
+acceleration = null
+deceleration = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.2, 0.2)

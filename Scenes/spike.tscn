@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0s8qfvsa7d12"]
+
+[ext_resource type="Script" uid="uid://d348ac4ycno1o" path="res://Scripts/spike.gd" id="1_1hotg"]
+[ext_resource type="Texture2D" uid="uid://dnngbi3qv6ckm" path="res://Sprites/asset/tusukan.png" id="2_2mnih"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhxds"]
+size = Vector2(3, 48)
+
+[node name="Spike" type="Area2D"]
+script = ExtResource("1_1hotg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("2_2mnih")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -12)
+shape = SubResource("RectangleShape2D_fhxds")
