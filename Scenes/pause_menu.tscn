@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl1i0po2ud2al"]
+
+[ext_resource type="Script" uid="uid://c5786ueig6rcm" path="res://Scripts/pause_menu.gd" id="1_k0w1u"]
+[ext_resource type="Texture2D" uid="uid://b0fnnet7jjmlb" path="res://Sprites/asset/Gemini_Generated_Image_hgpe4qhgpe4qhgpe-removebg-preview.png" id="2_1och7"]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k0w1u")
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.74509805)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ResumeButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("2_1och7")
