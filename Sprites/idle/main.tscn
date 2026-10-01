@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dnj4f72cn8l85"]
+[gd_scene load_steps=9 format=3 uid="uid://dnj4f72cn8l85"]
 
 [ext_resource type="Script" uid="uid://co4p5gj1ilic8" path="res://Scripts/platform.gd" id="1_rxsgx"]
 [ext_resource type="Texture2D" uid="uid://d0p5iygbthuyj" path="res://Sprites/asset/background 9_16.png" id="2_fsxlm"]
 [ext_resource type="PackedScene" uid="uid://baibyljjkptg5" path="res://Scenes/player.tscn" id="3_1u1yy"]
 [ext_resource type="Texture2D" uid="uid://df1ckhpdcxjou" path="res://Sprites/asset/bendera kemenangan.png" id="5_ad427"]
+[ext_resource type="PackedScene" uid="uid://cg83yp4s2hyvf" path="res://Scenes/game_over.tscn" id="5_fsxlm"]
+[ext_resource type="PackedScene" uid="uid://dl1i0po2ud2al" path="res://Scenes/pause_menu.tscn" id="6_1u1yy"]
 [ext_resource type="Script" uid="uid://ormve56clfqi" path="res://Scripts/mob_spawner.gd" id="6_rwv3d"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jjgbg"]
@@ -59,6 +61,10 @@ theme_override_font_sizes/font_size = 100
 text = "GAME OVER"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="GameOverScreen" parent="UI" instance=ExtResource("5_fsxlm")]
+
+[node name="PauseMenu" parent="UI" instance=ExtResource("6_1u1yy")]
 
 [node name="MobSpawner" type="Node2D" parent="."]
 script = ExtResource("6_rwv3d")
