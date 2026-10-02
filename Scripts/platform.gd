@@ -14,15 +14,25 @@ var score := 0
 var ghost_platforms: Array = []   # TEMBUS: platform yang sementara tembus
 
 @onready var score_label: Label = $UI/ScoreLabel
-@onready var game_over_label: Label = $UI/GameOverLabel
+@onready var game_over_screen = $UI/GameOverScreen    # GANTI dari game_over_label
+@onready var pause_menu = $UI/PauseMenu               # BARU
 @onready var player = $Player
 
 func _ready():
 	randomize()
 	update_score_label()
-	game_over_label.hide()
+	game_over_screen.hide()         # GANTI dari game_over_label.hide()
+	pause_menu.hide()               # BARU
 	player.died.connect(_on_player_died)
 	generate_platforms()
+
+func _unhandled_input(event: InputEvent) -> void:   # BARU
+	if event.is_action_pressed("pause"):
+		toggle_pause()
+
+func toggle_pause() -> void:                          # BARU
+	get_tree().paused = not get_tree().paused
+	pause_menu.visible = get_tree().paused
 
 func generate_platforms():
 	var last_x = 500.0
@@ -95,6 +105,6 @@ func update_score_label() -> void:
 
 func _on_player_died() -> void:
 	$MobSpawner.stop()
-	game_over_label.show()
-	await get_tree().create_timer(2.0).timeout
-	get_tree().reload_current_scene()
+	get_tree().paused = true        # GANTI: hentikan gameplay saat game over
+	game_over_screen.show()         # GANTI dari game_over_label.show()
+	# baris await + reload_current_scene dihapus, karena restart sekarang lewat tombol RestartButton

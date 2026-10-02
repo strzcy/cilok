@@ -51,20 +51,11 @@ offset_bottom = 23.0
 theme_override_font_sizes/font_size = 32
 text = "Score : 0"
 
-[node name="GameOverLabel" type="Label" parent="UI"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 100
-text = "GAME OVER"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="GameOverScreen" parent="UI" instance=ExtResource("5_fsxlm")]
+visible = false
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("6_1u1yy")]
+visible = false
 
 [node name="MobSpawner" type="Node2D" parent="."]
 script = ExtResource("6_rwv3d")
