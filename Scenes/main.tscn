@@ -52,6 +52,7 @@ theme_override_font_sizes/font_size = 32
 text = "Score : 0"
 
 [node name="GameOverScreen" parent="UI" instance=ExtResource("5_fsxlm")]
+process_mode = 3
 visible = false
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("6_1u1yy")]
