@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciwcjbymdslyd"
-path="res://.godot/imported/information.png-1c33d1ed6a8e69111236d3202374bcac.ctex"
+uid="uid://i10dqovr5fnt"
+path="res://.godot/imported/info.png-1dd53eb24cbb7f73c39f89c42ce3aeeb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/asset/Tombol/information.png"
-dest_files=["res://.godot/imported/information.png-1c33d1ed6a8e69111236d3202374bcac.ctex"]
+source_file="res://Sprites/asset/Tombol/info.png"
+dest_files=["res://.godot/imported/info.png-1dd53eb24cbb7f73c39f89c42ce3aeeb.ctex"]
 
 [params]
 

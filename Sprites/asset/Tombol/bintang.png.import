@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgrcvht1lfsio"
-path="res://.godot/imported/cart.png-96954dec41f49ecf0788f193a8364381.ctex"
+uid="uid://3icn4ubpac81"
+path="res://.godot/imported/bintang.png-8310d12cd00fcb2fc85781fc0da1dce3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/asset/Tombol/cart.png"
-dest_files=["res://.godot/imported/cart.png-96954dec41f49ecf0788f193a8364381.ctex"]
+source_file="res://Sprites/asset/Tombol/bintang.png"
+dest_files=["res://.godot/imported/bintang.png-8310d12cd00fcb2fc85781fc0da1dce3.ctex"]
 
 [params]
 

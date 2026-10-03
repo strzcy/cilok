@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdly74ibi8tm4"
-path="res://.godot/imported/star.png-c5d8b96c0192b83ed7b0607bf202c7ce.ctex"
+uid="uid://cfdfdof6xp7g"
+path="res://.godot/imported/shop.png-5bffffa1e64f3cf44aef61a88c28d1b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/asset/Tombol/star.png"
-dest_files=["res://.godot/imported/star.png-c5d8b96c0192b83ed7b0607bf202c7ce.ctex"]
+source_file="res://Sprites/asset/Tombol/shop.png"
+dest_files=["res://.godot/imported/shop.png-5bffffa1e64f3cf44aef61a88c28d1b9.ctex"]
 
 [params]
 

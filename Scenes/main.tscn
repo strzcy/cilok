@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dnj4f72cn8l85"]
+[gd_scene load_steps=11 format=3 uid="uid://dnj4f72cn8l85"]
 
 [ext_resource type="Script" uid="uid://co4p5gj1ilic8" path="res://Scripts/platform.gd" id="1_rxsgx"]
 [ext_resource type="Texture2D" uid="uid://d0p5iygbthuyj" path="res://Sprites/asset/background 9_16.png" id="2_fsxlm"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cg83yp4s2hyvf" path="res://Scenes/game_over.tscn" id="5_fsxlm"]
 [ext_resource type="PackedScene" uid="uid://dl1i0po2ud2al" path="res://Scenes/pause_menu.tscn" id="6_1u1yy"]
 [ext_resource type="Script" uid="uid://ormve56clfqi" path="res://Scripts/mob_spawner.gd" id="6_rwv3d"]
+[ext_resource type="Texture2D" uid="uid://d0jlpx3jk86a6" path="res://Sprites/asset/Tombol/pause.png" id="7_ynf5e"]
+[ext_resource type="Texture2D" uid="uid://i10dqovr5fnt" path="res://Sprites/asset/Tombol/info.png" id="8_hptm8"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jjgbg"]
 
@@ -57,6 +59,26 @@ visible = false
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("6_1u1yy")]
 visible = false
+
+[node name="TextureButton" type="TextureButton" parent="UI"]
+anchors_preset = -1
+anchor_right = 0.040000003
+offset_left = 20.0
+offset_right = 73.92
+offset_bottom = 100.0
+texture_normal = ExtResource("7_ynf5e")
+stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="UI"]
+modulate = Color(1, 1, 1, 0.5019608)
+anchors_preset = -1
+anchor_right = 0.040000003
+offset_left = 1100.0
+offset_top = 2.0
+offset_right = 1103.92
+offset_bottom = 52.0
+texture_normal = ExtResource("8_hptm8")
+stretch_mode = 0
 
 [node name="MobSpawner" type="Node2D" parent="."]
 script = ExtResource("6_rwv3d")
