@@ -8,4 +8,5 @@ the teams :
 1. Dessi
 2. Chelsea
 3. Reisya
-4. twlita
+4. talita
+5. birgita
